@@ -9,9 +9,6 @@ git rebase main
 git push origin <current branch>
 
 
-make a branch
-
-      git branch -b ros2_ws/src
 
 checkout all changes
 
