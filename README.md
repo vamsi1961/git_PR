@@ -56,6 +56,14 @@ pull to branch
 
       git push origin ros2_ws/src
 
+Delete a branch locally
+
+      git branch -d localBranchName
+
+Delete branch remotely
+
+      git push origin --delete remoteBranchName
+
 
 
 go to github page and go to branch and do pull request
