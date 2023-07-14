@@ -64,7 +64,9 @@ Delete branch remotely
 
       git push origin --delete remoteBranchName
 
+If branch is not upto date
 
+      git reset --hard origin/world 
 
 go to github page and go to branch and do pull request
 
