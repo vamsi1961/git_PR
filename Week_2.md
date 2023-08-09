@@ -111,6 +111,46 @@ Any commits that we would make at this point would be to this branch
 * `~2` or `~~` = parent's parent
 
 * `git log --oneline --graph`
+    *  displays graph
+
+* `git show HEAD`
+    * current commit object
+
+* `git show HEAD~`
+    * current commit parent
+
+* `git show master~3` 
+    * returns object 3 commits before
+    * we can pass name of object
+
+* `^^-` first parent's first parent
+    * It is appended to ID's and referemce in git commands primarily to refer to  specific parent in a merge commit
+    * Merge commit have multiple parents
+
+* `git show master^` => refers to the first parent  whose SHA-1 
+
+* `git show HEAD^2` => refer the current commit's second parent.If there is only one parent it will show error
+
+* `git show HEAD^^` => refer first parent's first parent
+
+## TAGS
+
+* A tag is a reference attached to a specific comment
+* It acts as a user-friendly label for the commit
+
+* **LIGHTWEIGHT**
+    * A simple reference to a commit
+* **ANNOTATED**
+    * A full git object that references a commit
+    * Includes tag author information, tag date , tag delete, tag message, the commit ID
+    * Optionally can be signed and verified with GNU Privacy gaurd (GPG)
+
+* `git tag-` => view all tags in repository
+
+
+
+
+
 
 
 
