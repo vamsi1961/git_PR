@@ -145,11 +145,110 @@ Any commits that we would make at this point would be to this branch
     * Includes tag author information, tag date , tag delete, tag message, the commit ID
     * Optionally can be signed and verified with GNU Privacy gaurd (GPG)
 
-* `git tag-` => view all tags in repository
+* `git tag` => view all tags in repository
+* A tag is a reference to a branch label
+
+* Tag a commit with an annotated flag:
+    *`git tag -a [-m <msg> | -F <file>] <tagname> [<commit>]`
+    * <commit> defaults to HEAD
+
+* `git push` does not automatically transfer tags to the remote repository
+
+    * `git push <remote> <tagname>`
+        * To transfer a single tag
+
+    * `git push <remote> --tags`
+        * To transfer a single tag
+
+* A branch label is a reference that points to the tip od the branch
+* HEAD is a reference that points to the current commit
+* In git commands, use `~` and `^` to conveniently refer to previous commits
+* Create tags to place labels on specific commits
+* Tags are not automatically pushed to remote repositories.
+
+## BRANCH
+
+* The set of commits that track back to the project's first commit
+
+* **Benifits**
+
+* Fast and easy to create
+* Enable experimentation
+* Enable team development
+* Support multiple project versions
 
 
+* Topic
+    * A fetaure, a bugfix, a hotfix, a configuration change etc.
+
+* Long-lived
+    * master , develop , release
+
+* `git branch` => list of branches
+
+* `git branch <name>` => creates a new branch
+
+## Checkout
+
+* It switch the current commit which is the commit that HEAD reference points to the checkout branch label or commit
+* Updates the working tree with the commit's files from the checkout commit
+
+* `git checkout <branch_name>` => to checkout a branch or commit
+    * to checkout commit give SHA-1 of the commit
+
+* `git checkout -b new_branch_name`
+
+## DETACHED HEAD
+
+checking out a commit rather than a branch leads to a detached HEAD state. Instead of the HEAD reference pointing to a branch label. HEAD points directly to the SHA-1 of a commit.
+
+## Deleting a branch label
+
+* If we immediately delete **feature X** branch and all that happens is that feature X label is denied
+
+* `git branch -d featureX` => deletes branch feature1
+
+## Dangling commits
+
+* **What happens if you tried deleting a branch label with unmerged work**
+
+    * Let's say featureX branch is created of commit C of master branch as shown.
+    * commit D is is done for featureX
+    * when featureX branch is deleted using `git branch -D featureX` commit D becomes dangling commit. 
+
+    * If a branch label is deleted accidentally which resulted in dangling commits. we can undi it by `git reflog`
+
+* `git reflog` => returns a local list of recent HEAD commits
+* A branch is a set of commits that trace backs ti the project's first commit
+* Creating a branch creates a branch label
+* Checkout involves updating HEAD and updating the work tree
+* A detached HEAD reference points directly to a commit
+* Fix a detached HEAD by creating a branch
+* Deleting a branch deletes a branch label
+* Dnagling commits will eventually be garbage collected
 
 
+## Merging
+
+### Merging Overview
+
+* combines work of independent branches
+* Involves merging a topic branch, such as the featureX branch
+
+* 4 types of merges
+
+    * Fast-farword merge
+    * Merge commit
+    * Squash merge*
+    * Rebase*
+
+* **Fast-farword merge**
+
+* A fast-forward merge moves the base branch label to the tip of topic branch
+* A fast-forward merge is possible only if no other commits have been made to the base branch since the topic branch was created. 
+* If any commits are done to base branch git will not allow to do it.
+
+* **steps**
 
 
 
