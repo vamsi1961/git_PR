@@ -250,7 +250,7 @@ checking out a commit rather than a branch leads to a detached HEAD state. Inste
 
 * **steps**
 
-    ** `git merge --no-ff featurex`
+    * `git merge --no-ff featurex`
 
 
 
