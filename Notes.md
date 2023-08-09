@@ -30,6 +30,7 @@
 
  * `git --version` => version information of git.
  * `git status` 
+    * view the status of files in the working tree and staginf area
     * branch name
     * what changes to commit
  * `git status --short` => critical status infomation
@@ -38,11 +39,24 @@
     * AM file... => AM means added and modified.
 
 
+*  `git commit` 
+    * Adds staaged cintent to the local repo as a commit.
+    * Previously commited files are also included
+    * Creates a snapshot of the entire project.
+    *  `git commit -m "initial commit"` => Commits with a message. if `-m " "` is not given then a editor opens to give a message 
 
+* `git log` => local repo commit history.
+    * see commit message
 
- * `git add ` => add files to staging area.
+* `git log --online` => condense version.
 
- * `git add file.txt` => adds files.
+* `git log --online -n` => to see last n commits
+
+ * `git add ` 
+    * add files to staging area.
+
+ * `git add file.txt` 
+    * adds files.
 
         git help [command]
 
@@ -109,3 +123,66 @@
     * It is often considered as a source of truth or official state of the project.
 
 A modified file is a file that has been prevously been added to the stage or commited to the local repository but since then has been changed in the working trees.
+
+
+# Remote Repository
+
+* A professionally manafed repository that is hosted in a data center or in the cloud.
+
+* It often acts as the central source of the truth or official state of the project.
+
+* It oftens integrates with other systems like issue trackers and continous delivery pipelines
+
+* **Hosted options**
+    * Bigbucket
+    * Github
+
+* **On premise Options**
+
+    * Bitbucker Server
+    * Github Enterprise
+    * Open Source Software
+        * these can be options can be hosted in a data center or in the cloud
+
+* The root directory of the remote repository is similar to ***.git*** of the local repository.
+* **URL** of the remote repository ends with ***.git***
+
+* `git clone`
+    * It is used to create a local copy of remote repository.
+
+
+* `git remote `
+    * displays information  about remote repository associated with local repository.
+* `git remote --verbose` or `git remote --v` 
+    * give detailed info
+
+* `git remote add` <name> <url>
+
+    * This adds ino about the remote repo to local repo
+
+## Branches
+
+* All commits belong to a branch
+* By default, there is a single branch and it is called master
+
+* `git push` 
+    * Writes commit for a branch to a remote repository
+* A successful push synchronizes the branches on the local and remote repositories so that they contain exactly the same commits.
+* Pushing to the remote repository is primary done to share your work with team, and also serves as a good backup of the local repository.
+
+* `git push [-u] [<repository>] [<branch>]` 
+
+    * <repository> can be a name(shortcut) or URL
+    * `-u` track this branch
+
+* `git push -u origin main` there is only one branch(main) so push directly to main branch
+
+    * After writing objects to the remote repository git informs that a tracking relationship has been setup between the local and remote branches because of `-u` flag
+
+
+
+
+
+
+
+
