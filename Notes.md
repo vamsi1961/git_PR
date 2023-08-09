@@ -181,6 +181,11 @@ A modified file is a file that has been prevously been added to the stage or com
 
 
 
+# Git graph model
+
+* merge occur when a commit has more than one parent
+* git uses a direct acyclic graph (DAG) to represent commit history
+* Commits point to their **parent** commits
 
 
 
