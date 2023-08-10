@@ -247,11 +247,23 @@ checking out a commit rather than a branch leads to a detached HEAD state. Inste
 * A fast-forward merge moves the base branch label to the tip of topic branch
 * A fast-forward merge is possible only if no other commits have been made to the base branch since the topic branch was created. 
 * If any commits are done to base branch git will not allow to do it.
+* git will always do a fast forward merge if you not tell to
 
 * **steps**
 
-    * `git merge --no-ff featurex`
-    * `git merge --no-ff featurex`
+    * `git checkout main`
+    * `git merge featureX` or `git merge --no-ff featurex`
+        * accept or modify the merge message
+    * `git branch -d featureX` => delete the branch it is entire optional
+
+* Merging combines the work of multiple branches
+* A fast-forward merge moves the base branch label to the tip of the topic branch
+* A merge is fast-forwardable if no other commits have been made to the base branch sinve branching
+* A merge ci=ommit is the result of combining the work of multiple commits
+* A merge commit has multiple parents
+
+
+    
 
 
 
