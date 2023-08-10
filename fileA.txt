@@ -9,5 +9,6 @@ This line in merg_conf
 
 This line in main
 
-Testing git fetch command
+Testing git fetch command.
+Made commit in local.
 
