@@ -8,3 +8,4 @@ This line in merg_conf
 
 This line in main
 
+Test -git fetch line added in remote
