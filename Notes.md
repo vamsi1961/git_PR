@@ -189,5 +189,7 @@ A modified file is a file that has been prevously been added to the stage or com
 
 
 
+## Git merging
+
 
 
