@@ -4,8 +4,18 @@ feature3
 
 
 
+
 This line in merg_conf
 
 This line in main
 
+
 Test -git fetch line added in remote
+
+
+Testing git fetch command.
+Made commit in local.
+
+Test fetch from repo
+
+

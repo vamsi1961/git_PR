@@ -23,7 +23,7 @@
 
     * commit user information
     * commit message
-    * SHA-1 values are unique for a given piece of content ( statistically speaking)
+    * SHA-1 values are unique for a given piece of content ( statistically speaking) 
     * They are often shorten to first 4 or more characters
     * reference to the commit parent or parents and a reference to the root tree
 
@@ -261,6 +261,9 @@ checking out a commit rather than a branch leads to a detached HEAD state. Inste
 * A merge is fast-forwardable if no other commits have been made to the base branch sinve branching
 * A merge ci=ommit is the result of combining the work of multiple commits
 * A merge commit has multiple parents
+
+
+
 
 
     
