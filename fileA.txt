@@ -2,9 +2,6 @@ feature1
 feature2
 feature3
 
-
-
-
 This line in merg_conf
 
 This line in main
